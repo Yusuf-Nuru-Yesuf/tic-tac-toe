@@ -185,7 +185,8 @@ const DisplayController = (function() {
     });
 
  
-    
+ 
+    return{update, showStartForm, showMessage};
 }) ();
 
 
