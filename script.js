@@ -154,7 +154,20 @@ const DisplayController = (function() {
         showMessage(Game.isOver() ? Game.getFinalMessage() : `${currentPlayer.getName()}'s Turn`);
     }
 
+    function showStartForm() {
+        startButton.style.display = "block";
+        gameContainer.style.display = "none";
+        player1Input.value = "";
+        player2Input.value = "";
+    }
 
+    function hideStartForm() {
+        startButton.style.display = "none";
+        gameContainer.style.display = "block";
+    }
+
+    
+    
 }) ();
 
 
