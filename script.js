@@ -61,6 +61,33 @@ const Game = (function() {
     }
 
 
+    function win() {
+        const board = GameBoard.getBoard();
+        const size = board.length;
+
+        for (let i = 0; i < size; i++) {
+            if (checkLine(board[i]) || checkLine(board.map(row => row[i]))) {
+                return true;
+            }
+        }
+
+        if (checkLine(board.map((row, i) => row[i])) ||
+            checkLine(board.map((row, i) => row[size - 1 - i]))) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function checkLine(line) {
+        return line.every(cell => cell !== "" & cell === line[0]);
+    }
+
+    function draw() {
+        return GameBoard.getBoard().every((row) => row.every((cell) => cell !== ""));
+    }
+
+
 
 
 }) ();
