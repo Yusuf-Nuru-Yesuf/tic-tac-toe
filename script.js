@@ -106,7 +106,17 @@ const Game = (function() {
         return GameBoard.getBoard().every((row) => row.every((cell) => cell !== ""));
     }
 
+    function isOver() {
+        return isGameOver;
+    }
 
+    function getCurrentPlayer() {
+        return currentPlayer;
+    }
+
+    function getFinalMessage() {
+        return finalMessage;
+    }
 
 
 }) ();
