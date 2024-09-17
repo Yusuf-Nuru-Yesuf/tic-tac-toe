@@ -187,10 +187,9 @@ const DisplayController = (function() {
     resetButton.addEventListener('click', () => {
         showStartForm();
     });
-
-
-
+    
     return{update, showStartForm, showMessage};
 }) ();
 
+DisplayController.showStartForm();
 
