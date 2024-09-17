@@ -120,3 +120,17 @@ const Game = (function() {
 
     return {startGame, makeMove, isOver, getCurrentPlayer, getFinalMessage};
 }) ();
+
+const DisplayController = (function() {
+    const boardElement = document.querySelector("#board");
+    const messageElement = document.querySelector("#message");
+    const resetButton = document.querySelector("#resetButton");
+    const startButton = document.querySelector("#startForm");
+    const gameContainer = document.querySelector("#gameContainer");
+    const player1Input = document.querySelector("#player1Name");
+    const player2Input = document.querySelector("#player2Name");
+
+       
+}) ();
+
+
