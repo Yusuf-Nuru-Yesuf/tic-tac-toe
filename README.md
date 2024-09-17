@@ -1,4 +1,3 @@
-# tic-tac-toe
 # Tic-Tac-Toe
 
 Welcome to the Tic-Tac-Toe game repository!
