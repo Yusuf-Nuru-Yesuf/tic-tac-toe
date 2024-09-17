@@ -148,7 +148,13 @@ const DisplayController = (function() {
         messageElement.textContent = message;
     }
 
-    
+    function update() {
+        displayBoard();
+        const currentPlayer = Game.getCurrentPlayer();
+        showMessage(Game.isOver() ? Game.getFinalMessage() : `${currentPlayer.getName()}'s Turn`);
+    }
+
+
 }) ();
 
 
