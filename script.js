@@ -31,6 +31,19 @@ const GameBoard = (function() {
         createBoard();
     }
 
-
     return { getBoard, updateBoard, resetBoard };
 })();
+
+const Player = (name, symbol) => {
+    const getName = () => name;
+    const getSymbol = () => symbol;
+    return {getName, getSymbol};
+}
+
+const Game = (function() {
+    let currentPlayer;
+    let players = {};
+    let isGameOver = false;
+    let finalMessage = "";
+
+}) ();
