@@ -166,7 +166,25 @@ const DisplayController = (function() {
         gameContainer.style.display = "block";
     }
 
-    
+    startButton.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const player1Name = player1Input.value.trim();
+        const player2Name = player2Input.value.trim();
+
+        if (player1Name && player2Name) {
+            Game.startGame(player1Name, player2Name);
+            hideStartForm();
+            update();
+        } else {
+            showMessage("Both player names are required!");
+        }
+    })
+
+    resetButton.addEventListener('click', () => {
+        showStartForm();
+    });
+
+ 
     
 }) ();
 
