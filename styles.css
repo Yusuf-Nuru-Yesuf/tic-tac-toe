@@ -65,3 +65,34 @@ body {
     font-size: 1.2em;
     margin-bottom: 20px;
     }
+
+    footer {
+        text-align: end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-top: 1px solid #ccc;
+        margin-top: 20px;
+    }
+    
+    footer a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #131111;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    
+    footer a:hover {
+        color: #000;
+    }
+    
+    .github-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    
