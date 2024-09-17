@@ -46,4 +46,17 @@ const Game = (function() {
     let isGameOver = false;
     let finalMessage = "";
 
+    function startGame(player1Name, player2Name) {
+        players = {
+            player1 : Player(player1Name, "X"),
+            player2 : Player(player2Name, "0"),
+        }
+        currentPlayer = players.player1;
+        GameBoard.resetBoard();
+        isGameOver = false;
+    }
+
+
+    return {startGame};
+
 }) ();
