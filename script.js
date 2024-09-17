@@ -144,6 +144,10 @@ const DisplayController = (function() {
         })
     }
 
+    function showMessage(message) {
+        messageElement.textContent = message;
+    }
+
     
 }) ();
 
