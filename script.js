@@ -118,5 +118,5 @@ const Game = (function() {
         return finalMessage;
     }
 
-
+    return {startGame, makeMove, isOver, getCurrentPlayer, getFinalMessage};
 }) ();
