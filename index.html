@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header>
 
+    <form id="startForm">
+        <label for="player1Name">Player 1 Name:</label>
+        <input type="text" id="player1Name" placeholder="Player 1" required>
+        <label for="player2Name">Player 2 Name:</label>
+        <input type="text" id="player2Name" placeholder="Player 2" required>
+        <button type="submit">Start Game</button>
+    </form>
+
+    <div id="gameContainer">
+        <div id="board"></div>
+        <div id="message"></div>
+        <button id="resetButton">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
