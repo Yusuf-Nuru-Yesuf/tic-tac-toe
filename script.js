@@ -56,7 +56,11 @@ const Game = (function() {
         isGameOver = false;
     }
 
+    function switchTurn() {
+        currentPlayer = currentPlayer === players.player1 ? players.player2 : players.player1;
+    }
 
-    return {startGame};
+
+
 
 }) ();
