@@ -130,7 +130,21 @@ const DisplayController = (function() {
     const player1Input = document.querySelector("#player1Name");
     const player2Input = document.querySelector("#player2Name");
 
-       
+    function displayBoard() {
+        const board = GameBoard.getBoard();
+        boardElement.innerHTML = "";
+        board.forEach((row, rowIndex) => {
+            row.forEach((cell, columIndex) => {
+                const cellElement = document.createElement("button");
+                cellElement.classList.add("cell");
+                cellElement.textContent = cell;
+                cellElement.addEventListener("click", () => Game.makeMove(rowIndex, columIndex));
+                boardElement.appendChild(cellElement);
+            })
+        })
+    }
+
+    
 }) ();
 
 
