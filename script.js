@@ -54,6 +54,7 @@ const Game = (function() {
         currentPlayer = players.player1;
         GameBoard.resetBoard();
         isGameOver = false;
+        DisplayController.update();
     }
 
     function switchTurn() {
@@ -68,15 +69,18 @@ const Game = (function() {
         if (draw()) {
             finalMessage = "It's a tie!"
             isGameOver = true;
+            DisplayController.showMessage(finalMessage);
         }
         else if (win()) {
             finalMessage = `${currentPlayer.getName()} wins!`
             isGameOver = true;
+            DisplayController.showMessage(finalMessage);
         }
         else {
             switchTurn();
         }
 
+        DisplayController.update();
         return true;
     }
 
@@ -184,8 +188,8 @@ const DisplayController = (function() {
         showStartForm();
     });
 
- 
- 
+
+
     return{update, showStartForm, showMessage};
 }) ();
 
