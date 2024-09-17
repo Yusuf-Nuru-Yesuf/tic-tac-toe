@@ -60,6 +60,25 @@ const Game = (function() {
         currentPlayer = currentPlayer === players.player1 ? players.player2 : players.player1;
     }
 
+    function makeMove(row, column) {
+        if(isGameOver || !GameBoard.updateBoard(row, column, currentPlayer.getSymbol())) {
+            return false;
+        }
+
+        if (draw()) {
+            finalMessage = "It's a tie!"
+            isGameOver = true;
+        }
+        else if (win()) {
+            finalMessage = `${currentPlayer.getName()} wins!`
+            isGameOver = true;
+        }
+        else {
+            switchTurn();
+        }
+
+        return true;
+    }
 
     function win() {
         const board = GameBoard.getBoard();
